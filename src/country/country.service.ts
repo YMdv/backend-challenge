@@ -1,4 +1,8 @@
-import { ConflictException, Injectable } from '@nestjs/common';
+import {
+  ConflictException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CreateCountryDto } from './dto/create-country.dto';
@@ -22,5 +26,17 @@ export class CountryService {
       throw new ConflictException('coountry already exists');
     }
     return await this.countryRepository.create(createCountryDto).save();
+  }
+
+  public async getCountryById(id: string): Promise<Country> {
+    const country = await this.countryRepository.findOne({
+      where: { id },
+      relations: [], //TODO: Adicionar relacionamentos
+    });
+
+    if (!country) {
+      throw new NotFoundException('country with this id not found');
+    }
+    return country;
   }
 }
