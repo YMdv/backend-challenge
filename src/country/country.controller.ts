@@ -40,4 +40,12 @@ export class CountryController {
   async getCountryById(@Param('id') id: string) {
     return await this.countryService.getCountryById(id);
   }
+
+  @Get()
+  @ApiOperation({
+    summary: 'Retorna todos os Países',
+  })
+  async getAllCountrys() {
+    return await this.countryService.getAllCountry();
+  }
 }

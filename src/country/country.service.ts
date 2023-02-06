@@ -39,4 +39,8 @@ export class CountryService {
     }
     return country;
   }
+
+  public async getAllCountry(): Promise<Country[]> {
+    return await this.countryRepository.find();
+  }
 }
