@@ -43,4 +43,12 @@ export class CountryService {
   public async getAllCountry(): Promise<Country[]> {
     return await this.countryRepository.find();
   }
+
+  public async deleteCountry(id: string): Promise<string> {
+    const country = await this.getCountryById(id);
+
+    await this.countryRepository.remove(country);
+
+    return 'removed';
+  }
 }

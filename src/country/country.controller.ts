@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import {
   ApiConflictResponse,
   ApiCreatedResponse,
@@ -7,6 +7,7 @@ import {
   ApiOperation,
   ApiTags,
 } from '@nestjs/swagger';
+import { DeleteResponseDto } from '../common/dto/delete-response.dto';
 import { CountryService } from './country.service';
 import { CountryDto } from './dto/country-dto';
 import { CreateCountryDto } from './dto/create-country.dto';
@@ -47,5 +48,17 @@ export class CountryController {
   })
   async getAllCountrys() {
     return await this.countryService.getAllCountry();
+  }
+
+  @Delete(':id')
+  @ApiOperation({
+    summary: 'Exclui um País',
+  })
+  @ApiOkResponse({ type: DeleteResponseDto })
+  @ApiNotFoundResponse({
+    description: 'País não encontrado',
+  })
+  async deleteCountry(@Param('id') id: string) {
+    return await this.countryService.deleteCountry(id);
   }
 }
