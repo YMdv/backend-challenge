@@ -1,8 +1,9 @@
 import { ApiProperty } from '@nestjs/swagger';
-export class CreateCountryDto {
+
+export class CreateFileDto {
   @ApiProperty()
   name: string;
 
   @ApiProperty()
-  link: string;
+  url: string;
 }
