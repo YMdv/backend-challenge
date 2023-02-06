@@ -23,7 +23,7 @@ export class CountryService {
     });
 
     if (checkCountry) {
-      throw new ConflictException('coountry already exists');
+      throw new ConflictException('country with that name already exists');
     }
     return await this.countryRepository.create(createCountryDto).save();
   }
