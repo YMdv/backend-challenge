@@ -15,4 +15,6 @@ export class Country extends BaseCollection {
   @IsNotEmpty()
   @Column({ type: 'varchar', length: 255 })
   link: string;
+
+  //TODO: Adicionar relacionamentos
 }
