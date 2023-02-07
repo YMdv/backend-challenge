@@ -4,5 +4,5 @@ export class CreateCountryDto {
   name: string;
 
   @ApiProperty()
-  link: string;
+  url: string;
 }

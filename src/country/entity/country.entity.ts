@@ -15,7 +15,7 @@ export class Country extends BaseCollection {
   @ApiProperty()
   @IsNotEmpty()
   @Column({ type: 'varchar', length: 255 })
-  link: string;
+  url: string;
 
   @ApiProperty({ type: () => Local })
   @OneToMany(() => Local, (local) => local.country)
