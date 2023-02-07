@@ -4,7 +4,7 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { In, Repository } from 'typeorm';
 import { CreateCountryDto } from './dto/create-country.dto';
 import { Country } from './entity/country.entity';
 
@@ -42,6 +42,10 @@ export class CountryService {
 
   public async getAllCountry(): Promise<Country[]> {
     return await this.countryRepository.find();
+  }
+
+  public async getCountryByIds(countryIds: string[]): Promise<Country[]> {
+    return await this.countryRepository.findBy({ id: In(countryIds) }); //TODO: CRIAR CONTROLADOR
   }
 
   public async deleteCountry(id: string): Promise<string> {
