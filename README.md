@@ -1,11 +1,8 @@
 
 
 <p align="center">
-  <a href="https://github.com/ClubPetro/backend-challenge" target="blank"><img src="https://raw.githubusercontent.com/YMdv/backend-challenge/dev/img/logo-clubpetro.png" width="320" alt="Logo CP" /></a>
+  <a href="https://github.com/ClubPetro/backend-challenge" target="blank"><img src="https://raw.githubusercontent.com/ClubPetro/backend-challenge/master/img/logo-clubpetro.png" width="320" alt="Logo CP" /></a>
 </p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
 
   <p align="center">Backend Challenge.</p>
 
@@ -13,7 +10,7 @@
 
 Backend criado com NodeJs + Framework [Nest](https://github.com/nestjs/nest), com o intuito de suprir as necessidades do Front-End abaixo:
 <p align="center">
-  <a href="https://github.com/ClubPetro/backend-challenge" target="blank"><img src="https://raw.githubusercontent.com/YMdv/backend-challenge/dev/img/challenge.png" width="720" alt="Nest Logo" /></a>
+  <a href="https://github.com/ClubPetro/backend-challenge" target="blank"><img src="https://raw.githubusercontent.com/YMdv/backend-challenge/master/img/challenge.png" width="720" alt="FrontEnd" /></a>
 </p>
 
 
@@ -67,7 +64,7 @@ Para rodar o swagger utilize o a seguinte url no seu navegador com a aplicação
 - Abaixo segue a modelagem do banco: 
 ```
 <p align="center">
-  <a href="https://github.com/ClubPetro/backend-challenge" target="blank"><img src="https://raw.githubusercontent.com/YMdv/backend-challenge/dev/img/banco.png" width="720" alt="Esquema Banco" /></a>
+  <a href="https://github.com/ClubPetro/backend-challenge" target="blank"><img src="https://raw.githubusercontent.com/YMdv/backend-challenge/master/img/banco.png" /></a>
 </p>
 
 ## License
