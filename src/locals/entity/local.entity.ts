@@ -10,7 +10,7 @@ import {
 } from 'typeorm';
 import { BaseCollection } from '../../common/entity/base.entity';
 import { Country } from '../../country/entity/country.entity';
-import { Metas } from '../../metas/entity/metas.entity';
+import { Goals } from '../../goals/entity/goals.entity';
 
 @Entity()
 @Unique(['name', 'country'])
@@ -26,8 +26,8 @@ export class Local extends BaseCollection {
   @JoinColumn({ name: 'countryId' })
   country: Country;
 
-  @ApiProperty({ type: () => Metas })
-  @OneToMany(() => Metas, (metas) => metas.local)
-  metas: Metas[];
+  @ApiProperty({ type: () => Goals })
+  @OneToMany(() => Goals, (goals) => goals.local)
+  goals: Goals[];
   //TODO: Adicionar relacionamentos
 }

@@ -4,10 +4,9 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { In, Repository } from 'typeorm';
+import { Repository } from 'typeorm';
 import { CountryService } from '../country/country.service';
 import { CreateLocalDto } from './dto/create-local.dto';
-import { UpdateLocalDto } from './dto/update-local-dto';
 import { Local } from './entity/local.entity';
 
 @Injectable()
@@ -36,9 +35,9 @@ export class LocalService {
       .save();
   }
 
-  public async getLocalById(id: string): Promise<Local> {
+  public async getLocalById(localId: string): Promise<Local> {
     const local = await this.localRepository.findOne({
-      where: { id },
+      where: { id: localId },
       relations: ['country'],
     });
 
@@ -51,27 +50,6 @@ export class LocalService {
 
   public async getAllLocal(): Promise<Local[]> {
     return await this.localRepository.find();
-  }
-
-  /* public async getAllLocalByCountry(countryId: string): Promise<Local[]> {
-    const locals = await this.localRepository.find({
-      where: { country: { id: countryId } },
-    });
-
-    return locals;
-  }*/
-
-  public async updateLocal(
-    localId: string,
-    updateLocalDto: UpdateLocalDto,
-  ): Promise<Local> {
-    await this.getLocalById(localId);
-    return await (
-      await this.localRepository.preload({
-        id: localId,
-        ...updateLocalDto,
-      })
-    ).save();
   }
 
   public async deleteLocal(localId: string): Promise<string> {

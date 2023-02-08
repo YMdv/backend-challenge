@@ -5,8 +5,8 @@ import { BaseCollection } from '../../common/entity/base.entity';
 import { Local } from '../../locals/entity/local.entity';
 
 @Entity()
-@Unique(['local'])
-export class Metas extends BaseCollection {
+@Unique(['date', 'local'])
+export class Goals extends BaseCollection {
   @ApiProperty()
   @Column({ type: 'date' })
   @IsNotEmpty()
