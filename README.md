@@ -57,6 +57,8 @@ Para rodar o swagger utilize o a seguinte url no seu navegador com a aplicação
 **OBSERVAÇÕES:** 
 
 - Banco de dados utilizado: Postgres
+	- Antes de rodar a aplicação, crie o banco com o nome abaixo no pgAdmin:
+		- Nome do banco: backend-challenge
 
 - Para o relacionamento entre as entidades, foi utilizado TypeORM, com o synchronize `ATIVO`. Não foi utilizado migrations.
 	- Country <=> Local `(@OneToMany) - (@ManyToOne)` 
