@@ -14,6 +14,4 @@ export class File extends BaseCollection {
   @IsNotEmpty()
   @Column({ type: 'varchar', length: 255 })
   url: string;
-
-  //TODO: Adicionar relacionamentos
 }
