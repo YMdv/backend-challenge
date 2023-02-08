@@ -11,10 +11,4 @@ export const ormConfig: TypeOrmModuleOptions = {
   logging: true,
   entities: [__dirname + '/**/*.entity{.ts,.js}'],
   synchronize: process.env.TYPEORM_SYNCHRONIZE == 'true' ? true : false,
-  //  ssl:
-  //    process.env.NODE_ENV !== 'local'
-  //      ? {
-  //          rejectUnauthorized: null,
-  //        }
-  //      : null,
 };
