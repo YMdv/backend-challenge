@@ -1,58 +1,58 @@
-# Desafio de Backend
 
-<img src="./img/logo-clubpetro.png" style="margin-left: 100px"
-     alt="Clubpetro" width="300">
+<p align="center">
+  <a href="https://github.com/ClubPetro/backend-challenge" target="blank"><img src="https://raw.githubusercontent.com/YMdv/backend-challenge/dev/img/logo-clubpetro.png" width="320" alt="Nest Logo" /></a>
+</p>
 
-- [Descrição](#descrição)
-  - [O Desafio](#o-desafio)
-  - [Requisitos Obrigatórios](#requisitos-obrigatórios)
-  - [Bônus](#bônus)
-- [Submissão e Prazo de Entrega](#submissão-e-prazo-de-entrega)
+[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-## Descrição
+  <p align="center">Backend Challenge.</p>
 
-Este desafio tem como objetivo avaliar as habilidades técnicas do candidato a vaga de desenvolvedor backend no Clubpetro.
+## Description
 
-#### O Desafio
+Backend criado com NodeJs + Framework [Nest](https://github.com/nestjs/nest), com o intuito de suprir as necessidades do Front-End abaixo:
+<p align="center">
+  <a href="https://github.com/ClubPetro/backend-challenge" target="blank"><img src="https://raw.githubusercontent.com/YMdv/backend-challenge/dev/img/challenge.png" width="320" alt="Nest Logo" /></a>
+</p>
 
-O desafio consiste em desenvolver uma API rest que permita o CRUD de lugares para se conhecer ao redor do mundo para alimentar o frontend que pode ser visto na imagem a seguir:
 
-<img src="./img/challenge.png" alt="Desafio" >
+## Installation
 
-Os dados a ser considerados são:
+```bash
+$ npm install
+```
 
-- País: O país escolhido;
-- Local: O local dentro do país escolhido;
-- Meta: O mês e o ano que o usuário pretende visitar o local;
-- Url da bandeira do país;
-- Data de criação do registro;
-- Data de atualização do registro.
+## Running the app
 
-#### Requisitos Obrigatórios
+```bash
+# development
+$ npm run start
 
-> Requisitos que serão avaliados no desafio.
+# watch mode
+$ npm run dev
 
-- A API deverá ser desenvolvida com Node.js e Express;
-- Apenas o Local e a Meta poderão ser editados;
-- O mesmo local em determinado país não poderá ser adicionado de forma duplicada;
-- A listagem dos dados deverá ser ordenada de forma crescente pela meta;
-- O candidato deverá adicionar ao projeto uma explicação de como executar a aplicação.
+# production mode
+$ npm run start:prod
+```
 
-#### Bônus
+## Test
 
-> Requisitos que não são obrigatórios mas podem te deixar em vantagem com relação aos outros candidatos.
+```bash
+TESTES DESABILITADOS NO MOMENTO
+```
 
-- Utilização do framework [NestJS](https://nestjs.com/);
-- Typescript;
-- Testes automatizados;
-- [TypeORM](https://typeorm.io/#/);
-- [Docker](https://www.docker.com/);
-- Deploy para [Google Cloud Platform](https://cloud.google.com/) (ao criar conta é possível receber um bonus para teste).
+## Support
 
-### Submissão e Prazo de entrega
+Entre em contato com [YMdv](https://github.com/YMdv) para mais suporte.
 
-- O canditado deverá realizar um fork deste repositório e submeter o código no mesmo;
-- Em caso do deploy realizado, a url deverá ser adicionada no README;
-- O prazo de entrega para este desafio é de 2 (duas) semanas, contando a partir do dia em que o candidato recebeu o email com o link do repositório;
-- Ao finalizar o desafio, o candidato deverá submeter o desafio no questionário disponível na sua área de candidato na plataforma(https://menvievagas.com.br/vagas/fam%C3%8Dliapires/) do Processo Seletivo. É só clicar em RESPONDER no questionário e inserir o link do seu PR.
-Em caso de dúvidas, enviar um e-mail para jobs@clubpetro.com.br
+## Documentation
+
+```bash
+Todos os endpoist estão documentados via Swagger e a collection esta na pasta (collection).
+Para rodar o swagger utilize o a seguinte url no seu navegador com a aplicação rodando:
+```
+[http://localhost:3000/api/#/]([http://localhost:3000/api/#/]())
+
+## License
+
+UNLICENSED.
