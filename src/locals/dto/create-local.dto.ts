@@ -1,8 +1,11 @@
 import { ApiProperty } from '@nestjs/swagger';
-export class CreateCountryDto {
+
+export class CreateLocalDto {
   @ApiProperty()
   name: string;
 
   @ApiProperty()
-  url: string;
+  country: string;
+
+  //TODO: ADICIONAR RELACIONAMENTOS
 }

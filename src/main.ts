@@ -10,10 +10,10 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-    .setTitle(`backend-challenge - ${process.env.NODE_ENV}`)
+    .setTitle(`Backend - Challenge`)
     .setDescription('backend do projeto backendchallenge (Yuri Mancini)')
     .setVersion(packageFile.version)
-    .addTag('backend-challenge')
+    .addTag('Abaixo seguem os endpoints:')
     .build();
 
   app.useGlobalPipes(new ValidationPipe());
